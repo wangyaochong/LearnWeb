@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    "use strict"//如果使用严格模式，那么对于writable:false的属性赋值会报错。
+    var p=Object.defineProperties({},{
+        x:{value:1,writable:true,enumerable:true,configurable:true},
+        y:{value:2,writable:true,enumerable:true,configurable:true},
+        add:{
+            get:function () {
+                return this.x+this.y;
+            },
+            enumerable:true,
+            configurable:true
+        }
+    })
+    console.log(p.x)
+    console.log(p.y)
+    console.log(p.add)
+
+    var propertyDescriptor=Object.getOwnPropertyDescriptor(p,"x");
+    console.log(propertyDescriptor)
+    Object.defineProperty(p,"x",{value:3,writable:false,enumerable:true,configurable:true})
+    console.log(p.x);
+    p.x=5;
+    console.log(p.x);
+
+</script>
+</html>
