@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    "use strict"
+    function fibonacci() {
+        let x=0,y=1;
+        while(true){
+            yield y;
+            [x,y]=[y,x+y];
+        }
+    }
+    for(var i=0;i<5;i++){
+        console.log(fibonacci().next())
+    }
+</script>
+</html>

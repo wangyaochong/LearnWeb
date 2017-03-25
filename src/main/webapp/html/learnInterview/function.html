@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a=[1,2,3];
+    function multiple2(i) {
+        return i*2;
+    }
+    a=a.map(multiple2);
+    console.log(a)
+    function multiple(i,j) {
+        return i*j;
+    }
+    var multipleResult=a.reduce(multiple);
+    console.log(multipleResult)
+</script>
+</html>

@@ -36,7 +36,8 @@
     }
 
     console.log(Array.isArray([1,2,3]))
-
+    console.log("Object.prototype.toString.apply 测试是否是数组", Object.prototype.toString.apply([1,2,3]))//使用基础的Object.toString方法
+    console.log("Array.toString测试是否是数组", [1,2,3].toString())//因为数组重写了toString方法，所以不好判断类型
     if(""||null||undefined||0||NaN||false){
 
     }else{
@@ -55,6 +56,20 @@
     console.log("boolean1===b00l", boolean1===b00l)
     console.log("boolean1==b00l", boolean1==b00l)
 
+
+//    console.log(null.prop); //都会报错can't read prop of null
+//    console.log(undefined.prop)//会报错can't read prop of undefined
+
+    console.log("字符串类型的：5-3","5"-"3")
+    var testA=1;
+    console.log("b=(a++)+a",(testA++)+testA)
+
+
+    function testFun(a) {
+        console.log(arguments.callee)
+        console.log(arguments.caller)
+    }
+    testFun('hello');
 
 </script>
 </html>

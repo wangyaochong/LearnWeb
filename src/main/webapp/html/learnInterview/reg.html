@@ -20,5 +20,19 @@
     console.log(spaceStr)
     console.log(replacedStr2)
     console.log(replacedStr3)
+
+
+    var startWith="start";
+    var regStartWith=/^(start)\w*/
+    var regStartWith2=/^(start)\w+/
+    console.log(regStartWith.test(startWith))
+    console.log(regStartWith2.test(startWith))
+
+    var str= "bcda";
+    var partReg=/bcd/;
+    console.log(partReg.test(str));
+    var matchStr="abc abcd abcddda";
+    var matchReg=/(abc)\w+/g;
+    console.log('match method',matchStr.match(matchReg));
 </script>
 </html>
