@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var arr=[1,2,3];
+//    console.log(arr.length)
+    console.log('打印长度为3的数组')
+
+    for(var i=0;i<arr.length;i++){
+        console.log(arr[i])
+    }
+    arr.length=2;
+//    console.log(arr.length)
+    console.log('打印设置长度为2的数组')
+    for(var i=0;i<arr.length;i++){
+        console.log(arr[i])
+    }
+    console.log('打印设置长度为4的数组')
+    arr.length=4;
+    for(var i=0;i<arr.length;i++){
+        console.log(arr[i])
+    }
+//    在数组的长度被设置时，如果长度设置的被原长度短，则数组长度以外的元素都被删除
+//    如果长度设置的比原长度长，则新的元素都是undefined
+    var testDelete={a:'a',b:'b'};
+    delete testDelete.a;
+    for(var i in testDelete){
+        console.log(testDelete[i])
+    }
+</script>
+</html>

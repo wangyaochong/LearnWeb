@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body onclick="myClick()" id="mybody">
 <div id='outerDiv' style="width: 200px;height: 200px;background-color: #00c0ef;position: relative;padding: 25px;box-sizing: border-box"
-     >
-    <div id='innerDiv' style="width: 100px;height: 100px;background-color: red;position: relative" ></div>
+>
+    <div id='innerDiv' style="width: 100px;height: 100px;background-color: red;position: relative"></div>
 </div>
-<a id="bA" href="https://www.baidu.com" >百度</a>
+<a id="bA" href="https://www.baidu.com" onclick="myClick()">百度</a>
+
+<p  id="test2onClick" onclick="myClick()">test2onClick</p>
 </body>
 <script>
+//    document.onclick = function () {
+//        console.log("documentClicked")
+//    }
 
     function preventDefaultClick(event) {
         if (event.preventDefault) {
@@ -22,8 +27,11 @@
         console.log('a tag clicked')
     }
 
-    window.onload=function () {
-        document.getElementById('bA').addEventListener('click',function (event) {
+    window.onload = function () {
+        document.getElementById("test2onClick").onclick=function () {
+            console.log('click on js')
+        }
+        document.getElementById('bA').addEventListener('click', function (event) {
             if (event.preventDefault) {
                 event.preventDefault();
             } else {
@@ -31,36 +39,36 @@
             }
             console.log('a tag clicked in eventListener')
         })
-       var outerDiv= document.getElementById('outerDiv');
-       console.log(outerDiv)
-        var innerDiv= document.getElementById('innerDiv');
+        var outerDiv = document.getElementById('outerDiv');
+        console.log(outerDiv)
+        var innerDiv = document.getElementById('innerDiv');
         console.log(innerDiv)
 
-//        outerDiv.addEventListener('click',MyClick,true);
-//        innerDiv.addEventListener('click',MyClick,true);
-//        outerDiv.addEventListener('click',MyClick,true);
-//        innerDiv.addEventListener('click',MyClick,true);
-        outerDiv.addEventListener('click',myClick,false);
-        innerDiv.addEventListener('click',myClick,false);
-        outerDiv.addEventListener('click',myClick2,false);
-        innerDiv.addEventListener('click',myClick2,false);
+        outerDiv.addEventListener('click', myClick, true);
+        innerDiv.addEventListener('click', myClick, true);
+        outerDiv.addEventListener('click', myClick, true);
+        innerDiv.addEventListener('click', myClick, true);
+//        outerDiv.addEventListener('click',myClick,false);
+//        innerDiv.addEventListener('click',myClick,false);
+//        outerDiv.addEventListener('click',myClick2,false);
+//        innerDiv.addEventListener('click',myClick2,false);
 
-        document.getElementById('outerDiv').onclick=function () {
+        document.getElementById('outerDiv').onclick = function () {
             console.log('outerDiv clicked')
         }
-        document.getElementById('innerDiv').onclick=function () {
+        document.getElementById('innerDiv').onclick = function () {
             console.log('innerDiv clicked')
         }
-        document.getElementById('outerDiv').onclick=function () {
+        document.getElementById('outerDiv').onclick = function () {
             console.log('outerDiv clicked 2')
         }
-        document.getElementById('innerDiv').onclick=function () {
+        document.getElementById('innerDiv').onclick = function () {
             console.log('innerDiv clicked 2')
         }
 
     }
     function myClick2(event) {
-        console.log(this.id,2)
+        console.log(this.id, 2)
 //        console.log(event)
     }
     function myClick(event) {
@@ -70,12 +78,11 @@
         return true;
     }
 
-    function stopBubble(e)
-    {
+    function stopBubble(e) {
         if (e && e.stopPropagation)
             e.stopPropagation()
         else
-            window.event.cancelBubble=true
+            window.event.cancelBubble = true
     }
 </script>
 </html>
