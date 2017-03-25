@@ -19,5 +19,16 @@
     }
     var multipleResult=a.reduce(multiple);
     console.log(multipleResult)
+
+
+    var objWithAttr={
+        aaaa:"aaaa",
+        display:function () {
+            console.log(this.aaaa);
+        }
+    }
+    objWithAttr.display();
+    var dis=objWithAttr.display;
+    dis();
 </script>
 </html>

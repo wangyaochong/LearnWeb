@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+/*
+几个重要的方法：
+    Object.create(prototype);
+    Object.getOwnPropertyNames(obj)
+    Object.getPropertyDescriptor(obj,propString);
+    Object.defineProperty(obj,propString,descriptor);
+
+
+
+   */
+
+
+
+    function clone(obj) {
+        var newObject=Object.create(obj);
+        var names=Object.getOwnPropertyNames(obj);
+        names.forEach(function (name) {
+           var des= Object.getOwnPropertyDescriptor(obj,name);
+           Object.defineProperty(newObject,name,des);
+        })
+        return newObject;
+    }
+    var obj=new Object();
+    obj.a="a";
+    obj.b="b";
+    Object.defineProperty(obj,"a",{value:"aa",writable:false,configurable:true,enumerable:true});
+    var newObj=clone(obj);
+    console.log(newObj);
+    console.log(Object.getOwnPropertyDescriptor(newObj,"a"))
+</script>
+</html>

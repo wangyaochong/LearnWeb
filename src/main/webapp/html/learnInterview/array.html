@@ -33,5 +33,10 @@
     for(var i in testDelete){
         console.log(testDelete[i])
     }
+
+//    以下是伪数组
+    var fakeArr={0:"start",1:"test",2:"ok",length:3};
+    var realArr= Array.prototype.splice.call(fakeArr,0);
+    console.log(realArr)
 </script>
 </html>
