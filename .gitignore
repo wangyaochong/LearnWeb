@@ -1,11 +1,5 @@
 target
 .idea
 *.iml
-node_modules
 
-lib.js
-app.js
-
-app.css
-lib.css
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+<div id="test" data-test="test">innerhtml</div>
+</body>
+<script>
+    console.log(document.getElementById("test").innerHTML)
+    console.log(    $("#test").text())
+    console.log(    $("#test").html())
+    var divTest=document.getElementById("test");
+
+    console.log("divTest.dataset.test",divTest.dataset.test)
+</script>
+</html>

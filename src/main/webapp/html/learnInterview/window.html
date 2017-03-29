@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div onclick="displayParent()">displayParent</div>
+<div onclick="changeChild()">changeChild</div>
+<iframe src="windowChild.html" id="childWindow"></iframe>
+</body>
+<script>
+
+    var parentValue="parentValue";
+    function displayParent() {
+        console.log("parentValue",parentValue)
+    }
+
+    function changeChild() {
+        var childFrame=document.getElementById("childWindow");
+        var childWindow=childFrame.contentWindow;
+        childWindow.childValue="child changed";
+    }
+</script>
+</html>
