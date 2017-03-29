@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div onclick="displayChild()">displayChild</div>
+<div onclick="changeParent()">changeParent</div>
+<div></div>
+</body>
+<script>
+    var childValue="childValue";
+    function displayChild() {
+        console.log("childValue",childValue)
+    }
+
+    function changeParent() {
+        parent.parentValue="parent changed";
+    }
+
+</script>
+</html>
