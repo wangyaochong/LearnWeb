@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>分数</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>小刘</td>
+        <td>男</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>小兰</td>
+        <td>女</td>
+        <td>70</td>
+    </tr>
+    <tr>
+        <td>小王</td>
+        <td>男</td>
+        <td>80</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+<script>
+    var isAsc=true;
+    $("table").on("click",function (event) {
+        if(event.target.innerHTML==="分数"){
+            var trs=$("tbody tr");
+            trs=sortTr(trs,isAsc);
+            isAsc=!isAsc;
+            $("tbody tr").remove();
+            $("tbody").prepend(trs);
+        }
+    })
+    function sortTr(trs, order) {
+        trs=trs.sort(function (a, b) {
+            if(order){
+                return $(a).find(" td").last().html()-$(b).find(" td").last().html();
+            }else{
+                return $(b).find(" td").last().html()-$(a).find(" td").last().html();
+            }
+        })
+        return trs;
+    }
+</script>
+</html>

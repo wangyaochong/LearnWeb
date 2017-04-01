@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>分数</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>小刘</td>
+        <td>男</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>小兰</td>
+        <td>女</td>
+        <td>70</td>
+    </tr>
+    <tr>
+        <td>小王</td>
+        <td>男</td>
+        <td>80</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+<script>
+    var isAsc=true;
+    document.getElementsByTagName("table")[0].addEventListener("click",function (event) {
+        if(event.target.innerHTML==="分数"){
+            var trs=document.querySelectorAll("tbody tr");
+            var trsCopy=[];
+            trs.forEach(function (tr) {//返回值是nodeList，无法使用排序功能，因此先转成数组
+                document.querySelector("tbody").removeChild(tr);//移除元素
+                trsCopy.push(tr)
+            })
+            trsCopy=sortTr(trsCopy,isAsc);
+            trsCopy.forEach(function (tr) {
+                document.querySelector("tbody").appendChild(tr);
+            })
+            isAsc=!isAsc;
+        }
+    })
+    function sortTr(trs, order) {
+        trs.sort(function (a,b) {
+            if(order){
+                return a.children[2].innerHTML-b.children[2].innerHTML;
+            }else{
+                return b.children[2].innerHTML-a.children[2].innerHTML;
+            }
+        })
+        return trs;
+    }
+</script>
+</html>
