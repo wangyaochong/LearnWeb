@@ -1,4 +1,4 @@
-package test.interview;
+package test.interview.网易;
 
 import org.junit.Test;
 
