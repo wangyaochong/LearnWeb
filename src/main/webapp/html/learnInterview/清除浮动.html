@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .outerBlock{
+        background-color: blue;
+        padding: 5px;
+    }
+    .float{
+        float: left;
+    }
+    .overFlow{
+        overflow: auto;
+    }
+    .innerBlock{
+        float: left;
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+    .outerClearFloat{
+        zoom: 1;
+    }
+    .outerClearFloat:after{
+        clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;
+    }
+    .clearFloat{
+        clear: both;
+    }
+</style>
+<body>
+<div class="outerBlock outerClearFloat">
+    <div class="innerBlock"></div>
+    <div class="innerBlock"></div>
+    <div class="innerBlock"></div>
+    <div class="innerBlock"></div>
+    <div class="innerBlock"></div>
+    <!--<div class="clearFloat"></div>-->
+</div>
+<div style="width: 100px;heig:100px;background-color: yellow;border: 1px solid black"></div>
+</body>
+</html>

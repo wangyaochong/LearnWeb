@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Animal(name) {
+        this.name=name;
+        this.object={};
+        this.object.x=1;
+        this.object.y=2;
+    }
+    Animal.prototype.sleep=function () {
+        console.log(this.name+"：正在睡觉");
+    }
+    Animal.prototype.displayObject=function () {
+        console.log(this.object.x,this.object.y);
+    }
+    function Cat() {
+        var animal=new Animal("cat");
+        for(var p in animal){
+            //拷贝继承的问题，就是每次构造都要重新定义函数，
+            // 可以通过判断prototype中是否有该函数进行优化
+            Cat.prototype[p]=animal[p];
+        }
+    }
+    Cat.prototype.run=function () {
+        console.log(this.name+"：正在跑步");
+    }
+    var cat=new Cat();
+    cat.sleep();
+    cat.run();
+
+</script>
+</html>
