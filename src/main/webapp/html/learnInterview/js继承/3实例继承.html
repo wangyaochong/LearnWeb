@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Animal(name) {
+        this.name=name;
+        this.object={};
+        this.object.x=1;
+        this.object.y=2;
+    }
+    Animal.prototype.sleep=function () {
+        console.log(this.name+"：正在睡觉");
+    }
+    Animal.prototype.displayObject=function () {
+        console.log(this.object.x,this.object.y);
+    }
+    function Cat() {//实例继承返回的是Animal对象，所以定义的方法只能在构造函数中定义，会造成子类方法多份拷贝的问题
+        var instance=new Animal("cat");
+        instance.run=function () {
+            console.log(this.name+"：正在跑步")
+
+        }
+        return instance;
+    }
+//    Cat.prototype.run=function () {//由于返回的是Animal的类对象，所以给Cat增加方法无用
+//        console.log(this.name+"：正在跑步")
+//    }
+    var cat=new Cat();
+    cat.sleep();
+    cat.run();
+</script>
+</html>

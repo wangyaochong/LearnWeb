@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var ticker=new EventSource("/LearnWeb/eventSource");
+    ticker.addEventListener("load",function (e) {
+        console.log(e)
+    })
+    ticker.addEventListener("message",function (e) {
+        console.log(e)
+    })
+    ticker.onmessage=function (e) {
+        console.log(e.type,e.data);
+    }
+    ticker.onload=function (e) {//这个ticker的onload不起作用，只能通过eventListener来添加事件响应函数。
+        console.log(e.type,e.data)
+    }
+</script>
+</html>

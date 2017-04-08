@@ -1,9 +1,4 @@
 package test;
-
-import enumpackage.MyEnum;
-import org.junit.Test;
-import test.interview.TestInterviewCode1;
-
 import java.io.Serializable;
 
 class MyNum {

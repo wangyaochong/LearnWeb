@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+<script>
+//    $.ajax({
+//        url:'http://api.map.baidu.com/location/ip?ak=G8TtPrY9CdH0aEAgu97oO8mr60rgldK2',
+//        success:function (data) {
+//            console.log(data)
+//        }
+//    })
+    function testFunc(data) {
+        console.log(data)
+    }
+</script>
+<script src="http://api.map.baidu.com/location/ip?ak=G8TtPrY9CdH0aEAgu97oO8mr60rgldK2&callback=testFunc"></script>
+</body>
+</html>

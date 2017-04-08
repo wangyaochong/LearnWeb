@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="start"></div>
+
+</body>
+<script>
+    var documentFragment = document.createDocumentFragment();
+    var elementById = document.getElementById("start");
+    var element = document.createElement("h1");
+    element.innerHTML="这是新创建的h1"
+    elementById.appendChild(element)
+    var text = document.createTextNode("这是新创建的textNode");
+    elementById.appendChild(text);
+    documentFragment.appendChild(element);
+    documentFragment.appendChild(text);
+    elementById.appendChild(documentFragment);
+</script>
+</html>
