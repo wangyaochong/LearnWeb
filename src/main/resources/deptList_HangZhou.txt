@@ -1,0 +1,887 @@
+{
+    "result": "success",
+    "responseCode": "200",
+    "data": {
+        "departmentId": "1",
+        "departmentName": "root",
+        "comment": "整个平台的根部门，超级管理员和系统管理员属于该部门，全平台唯一",
+        "parentId": "",
+        "level": 0,
+        "isIndependent": true,
+        "children": [
+            {
+                "departmentId": "2",
+                "departmentName": "杭州市",
+                "comment": "",
+                "parentId": "1",
+                "level": 1,
+                "isIndependent": true,
+                "children": [
+                    {
+                        "departmentId": "16",
+                        "departmentName": "上城区人民政府",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "19",
+                        "departmentName": "临安市人民政府办公室",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "8",
+                        "departmentName": "其他",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": [
+                            {
+                                "departmentId": "126",
+                                "departmentName": "市供销社",
+                                "comment": "",
+                                "parentId": "8",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "127",
+                                "departmentName": "市残联",
+                                "comment": "",
+                                "parentId": "8",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "132",
+                                "departmentName": "市流动人口办",
+                                "comment": "",
+                                "parentId": "8",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "129",
+                                "departmentName": "市爱卫办",
+                                "comment": "",
+                                "parentId": "8",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "130",
+                                "departmentName": "市科协",
+                                "comment": "",
+                                "parentId": "8",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "128",
+                                "departmentName": "市老龄工办",
+                                "comment": "",
+                                "parentId": "8",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "131",
+                                "departmentName": "杭州市西湖区信息中心",
+                                "comment": "",
+                                "parentId": "8",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "125",
+                                "departmentName": "杭州文广集团",
+                                "comment": "",
+                                "parentId": "8",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "departmentId": "7",
+                        "departmentName": "双重或垂直管理单位",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": [
+                            {
+                                "departmentId": "117",
+                                "departmentName": "中国邮政公司杭州市分公司",
+                                "comment": "",
+                                "parentId": "7",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "122",
+                                "departmentName": "市国安局",
+                                "comment": "",
+                                "parentId": "7",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "121",
+                                "departmentName": "市国税局",
+                                "comment": "",
+                                "parentId": "7",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "118",
+                                "departmentName": "市气象局",
+                                "comment": "",
+                                "parentId": "7",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "119",
+                                "departmentName": "市烟草局",
+                                "comment": "",
+                                "parentId": "7",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "116",
+                                "departmentName": "市电力局",
+                                "comment": "",
+                                "parentId": "7",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "124",
+                                "departmentName": "市邮政管理局",
+                                "comment": "",
+                                "parentId": "7",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "123",
+                                "departmentName": "杭州电信公司",
+                                "comment": "",
+                                "parentId": "7",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "120",
+                                "departmentName": "杭州移动公司",
+                                "comment": "",
+                                "parentId": "7",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "departmentId": "11",
+                        "departmentName": "市下城区卫生局",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "4",
+                        "departmentName": "市政府工作部门",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": [
+                            {
+                                "departmentId": "79",
+                                "departmentName": "交通运输局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "73",
+                                "departmentName": "人力资源和社会保障局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "100",
+                                "departmentName": "人民防空办公室",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "77",
+                                "departmentName": "住房保障和房产管理局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "85",
+                                "departmentName": "体育局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "98",
+                                "departmentName": "侨务办公室",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "68",
+                                "departmentName": "公安局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "80",
+                                "departmentName": "农业局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "86",
+                                "departmentName": "卫生和计划生育委员会",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "63",
+                                "departmentName": "发展改革委员会",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "71",
+                                "departmentName": "司法局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "82",
+                                "departmentName": "商务委员会",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "78",
+                                "departmentName": "园林文物局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "74",
+                                "departmentName": "国土资源局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "76",
+                                "departmentName": "城乡建设委员会",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "93",
+                                "departmentName": "城市管理委员会",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "97",
+                                "departmentName": "外事办公室",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "94",
+                                "departmentName": "安全生产监督管理局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "87",
+                                "departmentName": "审计局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "90",
+                                "departmentName": "市场监督局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "102",
+                                "departmentName": "市档案局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "62",
+                                "departmentName": "政府办公厅",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "65",
+                                "departmentName": "教育局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "84",
+                                "departmentName": "文化广电新闻出版社",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "83",
+                                "departmentName": "旅游委员会",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "95",
+                                "departmentName": "机关事务管理局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "81",
+                                "departmentName": "林业水利局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "70",
+                                "departmentName": "民政局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "67",
+                                "departmentName": "民族宗教事务局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "99",
+                                "departmentName": "法制办公室",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "103",
+                                "departmentName": "测绘局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "92",
+                                "departmentName": "物价局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "89",
+                                "departmentName": "环境保护局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "69",
+                                "departmentName": "监察局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "101",
+                                "departmentName": "研究室",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "66",
+                                "departmentName": "科学技术委员会",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "64",
+                                "departmentName": "经济和信息化委员会",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "88",
+                                "departmentName": "统计局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "75",
+                                "departmentName": "规划局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "72",
+                                "departmentName": "财政局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "91",
+                                "departmentName": "质量技术监督局",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "96",
+                                "departmentName": "金融工作办公室",
+                                "comment": "",
+                                "parentId": "4",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "departmentId": "6",
+                        "departmentName": "市政府直属事业机构",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": [
+                            {
+                                "departmentId": "114",
+                                "departmentName": "市社科院",
+                                "comment": "",
+                                "parentId": "6",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "115",
+                                "departmentName": "市综合办",
+                                "comment": "",
+                                "parentId": "6",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "111",
+                                "departmentName": "市西博办会展办",
+                                "comment": "",
+                                "parentId": "6",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "112",
+                                "departmentName": "市钱江新城管委会",
+                                "comment": "",
+                                "parentId": "6",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "113",
+                                "departmentName": "杭州公积金中心",
+                                "comment": "",
+                                "parentId": "6",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "departmentId": "17",
+                        "departmentName": "建德市人民政府",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "13",
+                        "departmentName": "数梦",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "15",
+                        "departmentName": "杭州市人才网",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "9",
+                        "departmentName": "杭州市民卡公司",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "20",
+                        "departmentName": "杭州市滨江区人民政府办公室",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "10",
+                        "departmentName": "杭州市燃气集团",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "3",
+                        "departmentName": "杭州市电子政务办",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": [
+                            {
+                                "departmentId": "61",
+                                "departmentName": "市民中心保卫处",
+                                "comment": "",
+                                "parentId": "3",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "departmentId": "18",
+                        "departmentName": "杭州市编委办",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "12",
+                        "departmentName": "杭州电信",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "22",
+                        "departmentName": "杭州西湖风景名胜区管委会",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "23",
+                        "departmentName": "桐庐县信息中心",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "25",
+                        "departmentName": "测试",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "14",
+                        "departmentName": "淳安县卫生和计划生育局",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "21",
+                        "departmentName": "淳安县电子政务办公室",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    },
+                    {
+                        "departmentId": "5",
+                        "departmentName": "特设机构和派出机构",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": [
+                            {
+                                "departmentId": "104",
+                                "departmentName": "国有资产监督管理委员会",
+                                "comment": "",
+                                "parentId": "5",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "105",
+                                "departmentName": "市审管办",
+                                "comment": "",
+                                "parentId": "5",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "107",
+                                "departmentName": "市钱江经济开发区管委会",
+                                "comment": "",
+                                "parentId": "5",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "110",
+                                "departmentName": "杭州之江度假区管委会",
+                                "comment": "",
+                                "parentId": "5",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "106",
+                                "departmentName": "杭州经济技术开发区管委会",
+                                "comment": "",
+                                "parentId": "5",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "109",
+                                "departmentName": "杭州西湖风景名胜管委会",
+                                "comment": "",
+                                "parentId": "5",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            },
+                            {
+                                "departmentId": "108",
+                                "departmentName": "杭州高新开发区管委会",
+                                "comment": "",
+                                "parentId": "5",
+                                "level": 3,
+                                "isIndependent": true,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "departmentId": "24",
+                        "departmentName": "西湖区人民政府",
+                        "comment": "",
+                        "parentId": "2",
+                        "level": 2,
+                        "isIndependent": true,
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "errorMsg": "",
+    "errorDetail": ""
+}

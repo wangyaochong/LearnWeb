@@ -67,15 +67,19 @@ public class DbChange {
 
     @Test
     public void testReadFromFile(){
-        String s = readDeptStringFromFile("/deptList.txt");
-        String s2 = readDeptStringFromFile("/projectList.txt");
+        String s = readDeptStringFromFile("/deptList_HangZhou.txt");
+        String s2 = readDeptStringFromFile("/projectList_HangZhou.txt");
         System.out.println(s);
         System.out.println(s2);
     }
 
+    @Test
+    public void testGetNewProjectMap(){
+        Map<String, Long> newProjectMap = getNewProjectMap();
+    }
     public Map<String,Long> getNewProjectMap(){
             Map<String,Long> newProjectMap=new HashMap<String, Long>();
-            String s = readDeptStringFromFile("/projectList.txt");
+            String s = readDeptStringFromFile("/projectList_HangZhou.txt");
             JSONObject jsonObject= JSON.parseObject(s);
 //        JSONObject jsonObject = JSONObject.fromObject(s);
             JSONObject data = jsonObject.getJSONObject("data");
@@ -84,6 +88,7 @@ public class DbChange {
             for(int i=0;i<children.size();i++){
                 newProjectMap.put(children.getJSONObject(i).getString("projectName"),children.getJSONObject(i).getLong("projectId"));
             }
+        System.out.println(newProjectMap);
         return newProjectMap;
     }
 
@@ -93,7 +98,6 @@ public class DbChange {
         try {
 //            BufferedReader bufferedReader = new BufferedReader(new FileReader("D:/qwer.txt"));
             InputStream resourceAsStream = this.getClass().getResourceAsStream(filePath);
-            System.out.println(resourceAsStream);
             BufferedReader bufferedReader =new BufferedReader( new InputStreamReader(resourceAsStream,"gbk"));
             StringBuilder stringBuilder = new StringBuilder();
             String content;
@@ -119,44 +123,27 @@ public class DbChange {
 
     public Map<String,Long> getNewDeptMap(){
         Map<String,Long> newDeptMap=new HashMap<String, Long>();
-        String s = readDeptStringFromFile("/deptList.txt");
+        String s = readDeptStringFromFile("/deptList_HangZhou.txt");
         JSONObject jsonObject= JSON.parseObject(s);
 //        JSONObject jsonObject = JSONObject.fromObject(s);
         JSONObject data = jsonObject.getJSONObject("data");
         JSONArray children = data.getJSONArray("children");
-        JSONObject o = children.getJSONObject(0);
-        JSONArray children1 = o.getJSONArray("children");
-        for(int i=0;i<children1.size();i++){
-            newDeptMap.put(children1.getJSONObject(i).getString("departmentName"),children1.getJSONObject(i).getLong("departmentId"));
+//        System.out.println(children);
+        for(int i=0;i<children.size();i++){
+            newDeptMap.put(children.getJSONObject(i).getString("departmentName"),children.getJSONObject(i).getLong("departmentId"));
+            JSONArray children2 = children.getJSONObject(i).getJSONArray("children");
+//            System.out.println("二层"+ children2);
+            for(int j=0;j<children2.size();j++){
+//                System.out.println("孩子"+children2.getJSONObject(j));
+                newDeptMap.put(children2.getJSONObject(j).getString("departmentName"),children2.getJSONObject(j).getLong("departmentId"));
+                JSONArray children3 = children2.getJSONObject(j).getJSONArray("children");
+//                System.out.println(children3);
+                for(int k=0;k<children3.size();k++){
+                    newDeptMap.put(children3.getJSONObject(k).getString("departmentName"),children3.getJSONObject(k).getLong("departmentId"));
+                }
+            }
         }
-        newDeptMap.put("浙江省政府", (long) 5);
-//        Set<Map.Entry<String, Long>> entries = newDeptMap.entrySet();
-//        for (Map.Entry<String, Long> entry : entries) {
-//            System.out.println(entry.getKey()+entry.getValue());
-//        }
-//        newDeptMap.put("中国国际贸易促进委员会浙江省委员会", (long) 42);
-//        newDeptMap.put("中国民主促进会浙江省委员会", (long) 64);
-//        newDeptMap.put("共青团浙江省委员会", (long) 65);
-//        newDeptMap.put("国家统计局浙江调查总队", (long) 41);
-//        newDeptMap.put("平台管控", (long) 58);
-//        newDeptMap.put("政务云管理平台", (long) 47);
-//        newDeptMap.put("浙江省交通运输厅", (long) 34);
-//        newDeptMap.put("浙江省人力资源和社会保障厅", (long) 20);
-//        newDeptMap.put("浙江省人大", (long) 19);
-//        newDeptMap.put("浙江省人民政府办公厅", (long) 29);
-//        newDeptMap.put("浙江省人民政府口岸办公室", (long) 51);
-//        newDeptMap.put("浙江省人民政府外事侨务办公室", (long) 55);
-//        newDeptMap.put("浙江省政府", (long) 5);
-//        newDeptMap.put("浙江省政府", (long) 5);
-//        newDeptMap.put("浙江省政府", (long) 5);
-//        newDeptMap.put("浙江省政府", (long) 5);
-//        newDeptMap.put("浙江省政府", (long) 5);
-//        newDeptMap.put("浙江省政府", (long) 5);
-//        newDeptMap.put("浙江省政府", (long) 5);
-//        newDeptMap.put("浙江省政府", (long) 5);
-//        newDeptMap.put("浙江省政府", (long) 5);
-//        newDeptMap.put("浙江省政府", (long) 5);
-//        newDeptMap.put("浙江省政府", (long) 5);
+        System.out.println(newDeptMap);
         return newDeptMap;
     }
 
@@ -171,11 +158,10 @@ public class DbChange {
         session.beginTransaction();
         List<AliyunOmsOverviewEntity> list = session.createCriteria(AliyunOmsOverviewEntity.class).list();
         System.out.println("开始修改");
-        int count=0;
         for (AliyunOmsOverviewEntity aliyunOmsOverviewEntity : list) {
             Long deptId = aliyunOmsOverviewEntity.getDepartment();
             if(deptId!=null){
-                DepartmentEntity deptById = getDeptById(deptId/100, originSessionFactory);
+                DepartmentEntity deptById = getDeptById(deptId, originSessionFactory);
                 Long aLong = newDeptMap.get(deptById.getLabel());
                 aliyunOmsOverviewEntity.setDepartment(aLong);
 //                System.out.println(deptById);

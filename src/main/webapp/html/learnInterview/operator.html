@@ -8,10 +8,23 @@
 
 </body>
 <script>
+    "use strict"
     var obj={a:'test'};
     console.log(obj&&obj.a);
     var tmp=1+2+'3'-'4'
     console.log(tmp)
     console.log("33"-"5")
+    console.log("我好前面"+(undefined||"你好"));
+    console.log(undefined||12);
+    console.log(0&&12);
+    /*
+    a||b==>
+    if(a){return a}
+    else{return b}
+
+    a&&b==>
+    if(!a){return a}
+    else{return b}
+     */
 </script>
 </html>

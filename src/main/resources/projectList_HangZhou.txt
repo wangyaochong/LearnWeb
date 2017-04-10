@@ -1,0 +1,191 @@
+{
+    "result": "success",
+    "responseCode": "200",
+    "data": {
+        "totalRows": 20,
+        "rows": [
+            {
+                "createTime": "2017-04-09 11:16:52",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 102,
+                "projectId": 30,
+                "departmentName": "市档案局",
+                "projectName": "存储档案条目项目"
+            },
+            {
+                "createTime": "2017-04-09 11:16:52",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 3,
+                "projectId": 31,
+                "departmentName": "杭州市电子政务办",
+                "projectName": "这是测试"
+            },
+            {
+                "createTime": "2017-04-09 11:16:51",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 132,
+                "projectId": 29,
+                "departmentName": "市流动人口办",
+                "projectName": "市流动人口办交换系统"
+            },
+            {
+                "createTime": "2017-04-09 11:16:50",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 131,
+                "projectId": 28,
+                "departmentName": "杭州市西湖区信息中心",
+                "projectName": "杭州市西湖区信息中心项目"
+            },
+            {
+                "createTime": "2017-04-09 11:16:49",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 4,
+                "projectId": 27,
+                "departmentName": "市政府工作部门",
+                "projectName": "杭州市权利运行前置机"
+            },
+            {
+                "createTime": "2017-04-09 11:16:48",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 74,
+                "projectId": 25,
+                "departmentName": "国土资源局",
+                "projectName": "杭州市国土资源局_固定资产管理系统"
+            },
+            {
+                "createTime": "2017-04-09 11:16:48",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 4,
+                "projectId": 26,
+                "departmentName": "市政府工作部门",
+                "projectName": "杭州市民卡征信系统"
+            },
+            {
+                "createTime": "2017-04-09 11:16:47",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 79,
+                "projectId": 24,
+                "departmentName": "交通运输局",
+                "projectName": "杭州交通气象报警与服务系统"
+            },
+            {
+                "createTime": "2017-04-09 11:16:46",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 4,
+                "projectId": 23,
+                "departmentName": "市政府工作部门",
+                "projectName": "政府服务网前置部署"
+            },
+            {
+                "createTime": "2017-04-09 11:16:45",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 88,
+                "projectId": 22,
+                "departmentName": "统计局",
+                "projectName": "经济社会发展统计数据库改造升级项目"
+            },
+            {
+                "createTime": "2017-04-09 11:16:44",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 75,
+                "projectId": 20,
+                "departmentName": "规划局",
+                "projectName": "杭州市基础空间数据库共享服务平台"
+            },
+            {
+                "createTime": "2017-04-09 11:16:44",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 63,
+                "projectId": 21,
+                "departmentName": "发展改革委员会",
+                "projectName": "发改委公共信息平台"
+            },
+            {
+                "createTime": "2017-04-09 11:16:43",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 10,
+                "projectId": 19,
+                "departmentName": "杭州市燃气集团",
+                "projectName": "燃气集团项目"
+            },
+            {
+                "createTime": "2017-04-09 11:16:42",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 4,
+                "projectId": 18,
+                "departmentName": "市政府工作部门",
+                "projectName": "杭州市电子监察项目"
+            },
+            {
+                "createTime": "2017-04-09 11:16:41",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 4,
+                "projectId": 17,
+                "departmentName": "市政府工作部门",
+                "projectName": "各区县权利运行系统"
+            },
+            {
+                "createTime": "2017-04-09 11:16:40",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 4,
+                "projectId": 16,
+                "departmentName": "市政府工作部门",
+                "projectName": "各区县交换平台"
+            },
+            {
+                "createTime": "2017-04-09 11:16:39",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 4,
+                "projectId": 14,
+                "departmentName": "市政府工作部门",
+                "projectName": "政务信息资源目录服务平台"
+            },
+            {
+                "createTime": "2017-04-09 11:16:39",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 4,
+                "projectId": 15,
+                "departmentName": "市政府工作部门",
+                "projectName": "杭州市政府决策平台"
+            },
+            {
+                "createTime": "2017-04-09 11:16:38",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 4,
+                "projectId": 13,
+                "departmentName": "市政府工作部门",
+                "projectName": "杭州市建达项目"
+            },
+            {
+                "createTime": "2017-04-09 11:16:37",
+                "userNum": 0,
+                "resourceNum": 0,
+                "departmentId": 62,
+                "projectId": 12,
+                "departmentName": "政府办公厅",
+                "projectName": "杭州市权利运行项目"
+            }
+        ]
+    },
+    "errorMsg": "",
+    "errorDetail": ""
+}
