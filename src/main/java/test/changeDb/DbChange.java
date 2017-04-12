@@ -67,8 +67,8 @@ public class DbChange {
 
     @Test
     public void testReadFromFile(){
-        String s = readDeptStringFromFile("/deptList_HangZhou.txt");
-        String s2 = readDeptStringFromFile("/projectList_HangZhou.txt");
+        String s = readDeptStringFromFile("/deptListNew.txt");
+        String s2 = readDeptStringFromFile("/projectListNew.txt");
         System.out.println(s);
         System.out.println(s2);
     }
@@ -76,10 +76,11 @@ public class DbChange {
     @Test
     public void testGetNewProjectMap(){
         Map<String, Long> newProjectMap = getNewProjectMap();
+        System.out.println(newProjectMap);
     }
     public Map<String,Long> getNewProjectMap(){
             Map<String,Long> newProjectMap=new HashMap<String, Long>();
-            String s = readDeptStringFromFile("/projectList_HangZhou.txt");
+            String s = readDeptStringFromFile("/projectListNew.txt");
             JSONObject jsonObject= JSON.parseObject(s);
 //        JSONObject jsonObject = JSONObject.fromObject(s);
             JSONObject data = jsonObject.getJSONObject("data");
@@ -89,6 +90,7 @@ public class DbChange {
                 newProjectMap.put(children.getJSONObject(i).getString("projectName"),children.getJSONObject(i).getLong("projectId"));
             }
         System.out.println(newProjectMap);
+        System.out.println(newProjectMap.size());
         return newProjectMap;
     }
 
@@ -123,7 +125,7 @@ public class DbChange {
 
     public Map<String,Long> getNewDeptMap(){
         Map<String,Long> newDeptMap=new HashMap<String, Long>();
-        String s = readDeptStringFromFile("/deptList_HangZhou.txt");
+        String s = readDeptStringFromFile("/deptListNew.txt");
         JSONObject jsonObject= JSON.parseObject(s);
 //        JSONObject jsonObject = JSONObject.fromObject(s);
         JSONObject data = jsonObject.getJSONObject("data");
@@ -144,6 +146,7 @@ public class DbChange {
             }
         }
         System.out.println(newDeptMap);
+        System.out.println(newDeptMap.size());
         return newDeptMap;
     }
 

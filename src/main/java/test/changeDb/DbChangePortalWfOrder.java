@@ -22,6 +22,7 @@ public class DbChangePortalWfOrder extends DbChange {
         SessionFactory originSessionFactory = bean.getObject();
         Session session = originSessionFactory.openSession();
         session.beginTransaction();
+        int count=0;
         List<WfOrder> list = session.createCriteria(WfOrder.class).list();
         for (WfOrder wfOrder : list) {
             String variable = wfOrder.getVariable();
@@ -31,6 +32,7 @@ public class DbChangePortalWfOrder extends DbChange {
             wfOrder.setVariable(jsonObject.toString());
 //            System.out.println(jsonObject.toString());
 //            wfOrder.setVariable(jsonObject.toString());
+            System.out.println(count++);
         }
         System.out.println("开始修改");
         System.out.println("修改完成");
