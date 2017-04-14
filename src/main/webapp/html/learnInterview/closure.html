@@ -18,6 +18,14 @@
             }, 10)
         })(i)
     }
+    function privateClass() {
+        var privateVar="private";
+        this.getPrivateVar=function () {
+            return privateVar;
+        }
+    }
+    var obj=new privateClass();
+    var privateVar = obj.getPrivateVar();
 </script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    String.prototype.renderMoreLevel=function (obj) {
+        var thisStr=this;
+        var match=thisStr.match(/\$\{((\w*)(\.)*)*}/g)
+        for(var  i=0;i<match.length;i++){
+            var prop=match[i].slice(2,match[i].length-1);
+            var splitProp=prop.split(".");
+            var propValue=obj[splitProp[0]];
+            for(var j=1;j<splitProp.length;j++){
+                propValue=propValue[splitProp[j]];
+            }
+            var call = Object.prototype.toString.call(propValue);
+            if(propValue&&'[object Object]'!==call){//如果有值且不是对象
+                thisStr=thisStr.replace(match[i],propValue);
+            }
+        }
+        return thisStr;
+    }
+
+    String.prototype.render=function (obj) {
+        var thisStr=this;
+//        var match=thisStr.match(/\$\{((\w+)|(\w+\.\w+))}/g)
+        var match=thisStr.match(/\$\{((\w*)(\.)*)*}/g)
+        for(var  i=0;i<match.length;i++){
+            var prop=match[i].slice(2,match[i].length-1);
+            var splitProp=prop.split(".");
+            if(splitProp.length==1&&obj[prop]){
+                thisStr=thisStr.replace(match[i],obj[prop]);
+            }
+            else if(splitProp.length==2&& obj[splitProp[0]][splitProp[1]]){
+                thisStr=thisStr.replace(match[i],obj[splitProp[0]][splitProp[1]]);
+            }
+        }
+        return thisStr;
+    }
+    var greeting = 'My name is ${name}, age ${age}, I am a ${job.jobName} my job level is ${job.jobLevel.level} test for ${job}';
+    var employee = {
+        name: 'XiaoMing',
+        age: 11,
+        job: {
+            jobName: 'designer',
+            jobLevel: {
+                level:'senior',
+                test:'test'
+            }
+        }
+    };
+    var result = greeting.render(employee);
+    var result2=greeting.renderMoreLevel(employee)
+    console.log(result);  //My name is XiaoMing, age 11, I am a designer
+    console.log(result2);  //My name is XiaoMing, age 11, I am a designer
+</script>
+</html>
