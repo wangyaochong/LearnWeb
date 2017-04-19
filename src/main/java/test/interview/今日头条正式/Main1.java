@@ -18,7 +18,6 @@ public class Main1 {
             firstNum.add(Integer.parseInt(in.nextLine()));
             firstCount--;
         }
-
         int secondCount = Integer.parseInt( in.nextLine());
         ArrayList<Integer> secondNum=new ArrayList<Integer>();
         while(secondCount>0){
