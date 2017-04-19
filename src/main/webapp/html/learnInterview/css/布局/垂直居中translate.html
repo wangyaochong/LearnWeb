@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .full{
+            padding: 0;
+            margin: 0;
+            background-color: #00c0ef;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            /*对于这个position，如果不设置为非static，那么子元素就相对body定位，即使body是static定位*/
+        }
+        .center{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            background: red;
+            width: 100px;
+            height: 100px;
+            transform:  translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body >
+<div class="full" id="mybody">
+    <div class="center"></div>
+</div>
+</body>
+<script>
+    var style = $("#mybody").css("position");
+    var style2 = $("body").css("position");
+    console.log(style)
+    console.log(style2)
+</script>
+</html>

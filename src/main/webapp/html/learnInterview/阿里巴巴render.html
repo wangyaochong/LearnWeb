@@ -19,7 +19,7 @@
                 propValue=propValue[splitProp[j]];
             }
             var call = Object.prototype.toString.call(propValue);
-            if(propValue&&'[object Object]'!==call){//如果有值且不是对象
+            if(propValue&&'[object Object]'!==call){//如果有值且是一个对象
                 thisStr=thisStr.replace(match[i],propValue);
             }
         }

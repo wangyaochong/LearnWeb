@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .userName{
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+        }
+        .header{
+            position: relative;
+        }
+        .middle{
+            position: relative;
+        }
+        .content{
+            margin-right:200px;
+            height: 500px;
+            background: blue;
+        }
+        .footer{
+            position: relative;
+        }
+        aside{
+            background: red;
+            position: absolute;
+            top:0px;
+            right: 0px;
+            width: 200px;
+            height: 300px;
+        }
+        .logo{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+        <div class="logo">logo</div>
+        <input type="text" class="userName" placeholder="用户名">
+</div>
+<div class="middle">
+    <div class="content">content</div>
+    <aside>asside 固定宽度200</aside>
+</div>
+<div class="footer"> footer</div>
+</body>
+<script>
+    var cache=[1,1,2];
+    function getNthFibonacci(count) {
+        if(cache[count]){
+            return cache[count];
+        }
+        var current=cache.length-1;
+        while(current<count){
+            cache[current+1]=cache[current]+cache[current-1];
+            current++;
+        }
+        return cache[count];
+    }
+    console.log(getNthFibonacci(9))
+    console.log(getNthFibonacci(4))
+</script>
+</html>

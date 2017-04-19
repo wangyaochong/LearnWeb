@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
+    <style>
+        section,h1{
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<article>
+    <h1>显示html所有标签</h1>
+    <section>
+        <h2>&lt;!----&gt;</h2>
+        <h3>用于注释</h3>
+    </section>
+    <section>
+        <h2>&lt;!DOCTYPE&gt;</h2>
+        <h3>用于告知浏览器使用哪种html的版本</h3>
+    </section>
+    <section>
+        <h2>&lt;a&gt;</h2>
+        <h3>定义超链接，从一个页面链接到另一个页面</h3>
+        <p><a href="http://www.baidu.com">链接到百度</a></p>
+    </section>
+    <section>
+        <h2>&lt;video&gt;</h2>
+        <h3>定义视频，比如电影片段或其他视频流</h3>
+        <p></p>
+    </section>
+    <section>
+        <h2>&lt;wbr&gt;</h2>
+        <h3>规定文本中的何处适合添加换行符</h3>
+        <p><b>sdfsdfsdfsdfsdsdfsdfsdffsfsdfsddfssdfsdfsf本句话中的"<wbr>Http<wbr>Xml<wbr>Request"在距离不够的时候会分割</b></p>
+    </section>
+    <section>
+        <h2>&lt;bdo&gt;</h2>
+        <h3>用于指定文本方向</h3>
+        <p><bdo dir="rtl">这段文本从右到左显示</bdo></p>
+    </section>
+    <section>
+        <h2>&lt;blockquote&gt;</h2>
+        <h3>定义一个引用块</h3>
+        <p><blockquote>这是一个引用块</blockquote></p>
+    </section>
+    <section>
+        <h2>&lt;caption&gt;</h2>
+        <h3>定义表格的标题</h3>
+        <p>
+            <table>
+                <caption>这是表格的标题</caption>
+                <tr>
+                    <th>列标题</th>
+                    <th>列标题2</th>
+                </tr>
+                <tr>
+                    <td>列内容1</td>
+                    <td>列内容2</td>
+                </tr>
+            </table>
+        </p>
+    </section>
+    <section>
+        <h2>&lt;center&gt;</h2>
+        <h3>将文本水平居中</h3>
+        <p>
+            <span>这是一些文本</span>
+            <center>这是一些文本</center>
+            <span>这是一些文本</span>
+        </p>
+    </section>
+    <section>
+        <h2>&lt;cite&gt;</h2>
+        <h3>用于定义作品的标题</h3>
+        <p>作品的标题是<cite>夜的第七章</cite></p>
+    </section>
+    <section>
+        <h2>&lt;col&gt;</h2>
+        <h3>用于定义表格的列属性，需要配置colgroup标签使用</h3>
+        <p>
+            <table>
+                <colgroup>
+                    <col style="background: red">
+                    <col style="background: yellow">
+                </colgroup>
+                <tr>
+                    <th>标题1</th>
+                    <th>标题2</th>
+                </tr>
+                <tr>
+                    <td>内容1</td>
+                    <td>内容2</td>
+                </tr>
+            </table>
+        </p>
+    </section>
+    <section>
+        <h2>&lt;datalist&gt;</h2>
+        <h3>用于描述input可能的值</h3>
+        <p>
+            <input type="text" placeholder="请输入一个值" list="options">
+            <datalist id="options">
+                <option value="第一个"></option>
+                <option value="第二个"></option>
+                <option value="第三个"></option>
+            </datalist>
+        </p>
+    </section>
+    <section>
+        <h2>&lt;fieldset&gt;</h2>
+        <h3>将表单内元素进行分组</h3>
+        <p>
+        <form action="">
+        <fieldset>
+            <legend>个人信息</legend>
+            姓名：<input type="text">
+            姓名：<input type="text">
+            姓名：<input type="text">
+        </fieldset>
+        </form>
+        </p>
+    </section>
+    <section>
+        <h2>&lt;figure&gt;</h2>
+        <h3>标记文档中的一个图片，需配合figcaption使用</h3>
+        <p></p>
+    </section>
+    <section>
+        <h2>&lt;footer&gt;</h2>
+        <h3>文档的页脚</h3>
+        <p>
+            <footer>
+                <p>作者：王耀冲</p>
+                <p>日期：2017年4月14日</p>
+            </footer>
+        </p>
+    </section>
+    <section>
+        <h2>&lt;header&gt;</h2>
+        <h3>article的页眉</h3>
+        <p>
+            <article><header><h1>ie9浏览器</h1></header><span>这是内容</span></article></p>
+    </section>
+    <section>
+        <h2>&lt;hgroup&gt;</h2>
+        <h3>对标题进行组合</h3>
+        <p><hgroup>
+            <h1>Welcome to my WWF</h1>
+            <h2>For a living planet</h2>
+        </hgroup></p>
+    </section>
+    <section>
+        <h2>&lt;nav&gt;</h2>
+        <h3>一个导航</h3>
+        <p>
+            <nav>
+                <a href="http://www.baidu.com">百度</a>
+                <a href="http://www.qq.com">qq</a>
+            </nav></p>
+    </section>
+    <section>
+        <h2>&lt;noscript&gt;</h2>
+        <h3>用于在不支持javascript的浏览器中进行提示</h3>
+        <p><noscript>对不起，您的浏览器不支持javascript</noscript></p>
+    </section>
+    <section>
+        <h2>&lt;aside&gt;</h2>
+        <h3>用于定义非主体内容，比如推荐，广告等</h3>
+        <p><aside>这是附加内容</aside></p>
+    </section>
+    <section>
+        <h2>&lt;pre&gt;</h2>
+        <h3>对文本进行预处理格式化</h3>
+        <p><pre>这是具有空格      的文本</pre></p>
+    </section>
+    <section>
+        <h2>&lt;q&gt;</h2>
+        <h3>用于标记一段引用，也即是给文本加上双引号</h3>
+        <p>他说：<q>你好吗？</q> </p>
+    </section>
+    <section>
+        <h2>&lt;sub&gt;</h2>
+        <h3>用于显示下标</h3>
+        <p>我有一个下标<sub>我是下标</sub></p>
+    </section>
+    <section>
+        <h2>&lt;sup&gt;</h2>
+        <h3>用于显示上标</h3>
+        <p>我有一个上标<sup>我是上标</sup></p>
+    </section>
+    <section>
+        <h2>&lt;title&gt;</h2>
+        <h3>用于指定文档标题</h3>
+
+    </section>
+
+</article>
+</body>
+</html>
