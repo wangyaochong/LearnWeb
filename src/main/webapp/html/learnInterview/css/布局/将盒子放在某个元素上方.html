@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height:200px;
+        }
+        .wrapper{
+            overflow: hidden;
+            height: auto;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+        .block{
+            top: 100px;
+            left: 100px;
+            height: 50px;
+            width: 50px;
+            /*visibility: hidden;*/
+            background: black;
+            position: absolute;
+            transform: translate(0,-100%);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="wrapper" onclick="showBlock(event)">
+        <div style="background: blue">sdf</div>
+        <div style="background: red">sdf</div>
+        <div style="background: yellow">sdf</div>
+        <div style="background: wheat">sdf</div>
+        <div style="background: orange">sdf</div>
+    </div>
+</div>
+
+<div class="block" id="block">
+
+</div>
+</body>
+<script>
+    function showBlock(event) {
+        console.log(event.srcElement)
+        var elementById = document.getElementById("block");
+        elementById.style.top=event.srcElement.offsetTop+"px";
+        elementById.style.left=event.srcElement.offsetLeft+"px";
+//        document.getElementById("block").style.visibility="visible";
+    }
+</script>
+</html>

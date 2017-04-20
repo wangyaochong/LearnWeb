@@ -5,21 +5,44 @@
     <title>Title</title>
     <style>
         .dengbi{
-            float:left;
             width:100%;
-            height:0;
+            height: 0;
             border:  1px solid black;
             padding-bottom:61.8%;
             background: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
         }
         .parent{
             width: 80%;
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+            /*align-content: center;*/
+            align-items: center;
+            /*justify-items: center;*/
+            width: 100px;
+            height: 100px;
+            background: yellow;
+        }
+        .flexInner{
+            background-color: blue;
+            width: 20px;
+            height:20px;
         }
     </style>
 </head>
 <body>
 <div class="parent">
-    <div class="dengbi"></div>
+    <div class="dengbi"><div >第三方斯蒂芬</div></div>
+</div>
+<div class="flex">
+    <div class="flexInner">1</div>
+    <div class="flexInner">2</div>
 </div>
 </body>
 </html>

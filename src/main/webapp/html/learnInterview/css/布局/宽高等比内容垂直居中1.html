@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper{
+            width: 80%;
+        }
+        .inner{
+            padding-bottom: 60%;
+            height: 0;
+            background: red;
+            position: relative;
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*justify-content: center;*/
+        }
+        .content{
+            width: 50%;
+            height: 50%;
+            background: yellow;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="inner">
+        <div class="content">content</div>
+    </div>
+</div>
+</body>
+</html>

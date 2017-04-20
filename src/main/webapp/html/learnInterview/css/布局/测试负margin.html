@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .rowOne{
+            height: 100px;
+            background: red;
+        }
+        .rowTwo{
+            height: 100px;
+            background: blue;
+        }
+        .inner{
+            height: 100px;
+            width: 200px;
+            border: 1px solid black;
+            background: yellow;
+            display: inline-block;
+            position: relative;
+        }
+        .test{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            margin-left: -50px;
+            margin-top: -50px;
+            /*margin-right: -50px;*/
+            /*margin-bottom: -50px;*/
+            background: forestgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="rowOne"></div>
+    <div class="rowTwo">
+        <div class="inner"> </div>
+        <div class="inner">
+            <div class="test"></div>
+        </div>
+    </div>
+</body>
+</html>

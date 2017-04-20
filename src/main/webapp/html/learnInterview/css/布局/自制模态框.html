@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .modalWrapper{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            /*visibility: visible;*/
+        }
+        .modalWhole{
+            position: absolute;
+            width: 50%;
+            min-height: 30%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: red;
+        }
+        .modalFooter{
+            position: absolute;
+            width: 100%;
+            bottom:5px;
+        }
+    </style>
+</head>
+<body>
+<button onclick="showModal()">显示模态框</button>
+<div class="modalWrapper" id="modalWrapper" onclick="hideModal()">
+    <div class="modalWhole" onclick="stop(event);">
+        <div>header</div>
+        <div>content</div>
+        <div class="modalFooter">
+            <div style="float: right"><button onclick="alert('点击了模态框的确定')">yes</button> <button onclick="hideModal()">no</button></div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function stop(event) {
+        if(event.stopPropagation){
+            event.stopPropagation();
+        }else{
+            event.cancelBubble=true;
+        }
+    }
+    function showModal() {
+        document.getElementById("modalWrapper").style.visibility="visible";
+    }
+    function hideModal() {
+        document.getElementById("modalWrapper").style.visibility="hidden";
+    }
+</script>
+</html>
