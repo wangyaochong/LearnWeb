@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            position: relative;
+            background: red;
+            /*width: 100px;*/
+            /*height: 100px;*/
+        }
+        /*@page{*/
+            /*size: 200px 200px ;*/
+            /*margin: 50px;*/
+        /*}*/
+        @media print {
+            *{
+                margin: 0!important;
+                padding: 0!important;
+            }
+            div{
+                /*width: 100px;*/
+                /*height: 100px;*/
+                background-color: #00c0ef!important;
+                font-size: 10em;
+                color: red !important;
+                /*page-break-after: always;*/
+                page-break-before: always;
+
+            }
+        }
+    </style>
+</head>
+<body>
+<div onclick="myprint()">sdfdsddsdfsdff</div>
+<div onclick="myprint()">sdfdsddf</div>
+<div onclick="myprint()">sdfdsddf</div>
+<div onclick="myprint()">sdfdsddf</div>
+
+</body>
+<script>
+    function myprint() {
+        window.print();
+    }
+</script>
+</html>

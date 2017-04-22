@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="../../../../node_modules/jquery/dist/jquery.js"></script>
+
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         div{
             height:200px;
+            width: 300px;
+            border: 10px solid black;
+            padding: 10px;
+            margin: 30px;
+        }
+        .wrapperOut{
+            width: 1000px;
+            height: auto;
+            background: crimson;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+
         }
         .wrapper{
+            width: 400px;
             overflow: hidden;
             height: auto;
             margin-left: 100px;
@@ -19,7 +39,7 @@
             height: 50px;
             width: 50px;
             /*visibility: hidden;*/
-            background: black;
+            background: antiquewhite;
             position: absolute;
             transform: translate(0,-100%);
             z-index: 1000;
@@ -27,27 +47,50 @@
     </style>
 </head>
 <body>
-<div class="wrapper">
-    <div class="wrapper" onclick="showBlock(event)">
-        <div style="background: blue">sdf</div>
-        <div style="background: red">sdf</div>
-        <div style="background: yellow">sdf</div>
-        <div style="background: wheat">sdf</div>
-        <div style="background: orange">sdf</div>
+<div>最外层div
+    <div>间隔层div</div>
+    <div class="wrapperOut">
+        wrapperOut
+        <div class="wrapper" onclick="showBlock(event)">
+            以下是各个block
+            <div style="background: blue">sdfsdfds</div>
+            <div style="background: red">sdfsdfs</div>
+            <div style="background: yellow">ssaadf</div>
+            <div style="background: wheat">sadsdff</div>
+            <div style="background: orange">ssdfdsffffdf</div>
+        </div>
     </div>
 </div>
+<p class="block" id="block">
 
-<div class="block" id="block">
-
-</div>
+</p>
 </body>
 <script>
     function showBlock(event) {
-        console.log(event.srcElement)
+
         var elementById = document.getElementById("block");
-        elementById.style.top=event.srcElement.offsetTop+"px";
-        elementById.style.left=event.srcElement.offsetLeft+"px";
-//        document.getElementById("block").style.visibility="visible";
+        var element=event.srcElement;
+        var absoluteLeft=0;
+        var absoluteTop=0;
+        var marginLeft=0;
+        var marginTop=0;
+        console.log(window.getComputedStyle)
+//        var marginLeft = document.defaultView.getComputedStyle(element,null)["marginLeft"].replace("px","");
+//        var marginTop = document.defaultView.getComputedStyle(element,null)["marginTop"].replace("px","");
+//        var left = element.getBoundingClientRect().left+document.documentElement.scrollLeft;
+//        var top = element.getBoundingClientRect().top+document.documentElement.scrollTop;
+        while(element){
+            absoluteLeft+=element.offsetLeft+element.clientLeft;
+            absoluteTop+=element.offsetTop+element.clientTop;
+            element=element.offsetParent;
+        }
+        elementById.style.top=(absoluteTop-marginTop)+"px";
+        elementById.style.left=(absoluteLeft-marginLeft)+"px";
+//        elementById.style.top=event.pageY+"px";
+//        elementById.style.left=event.pageX+"px";
+
+//                elementById.style.top=top+"px";
+//        elementById.style.left=left+"px";
     }
 </script>
 </html>
