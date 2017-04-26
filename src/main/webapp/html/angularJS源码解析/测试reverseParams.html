@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function reverseParams(iteratorFn) {
+        return function (value, key) {
+            iteratorFn(key, value);
+        };
+    }
+    var reverseFunc=reverseParams(function (key,value) {
+        console.log(key,value);
+    })
+    reverseFunc("key","value");
+</script>
+</html>

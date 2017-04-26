@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../../lib/sea-debug.js"></script>
+</head>
+<body>
+<div style="width: 200px;height: 200px;background-color: red" id="mydiv"></div>
+</body>
+<script>
+    console.log("sdfdsf");
+//    seajs.use("jquery",function ($) {
+//       $("#mydiv").hide();
+//   });
+
+//    var $= seajs.use("jquery",function ($) {
+//        $("#mydiv").hide();
+//    });
+//    var m=seajs.use("mymodule");
+//    m.sayHello();
+//    var m=require("mymodule")
+//    m.sayHello();
+    seajs.use("m1",function (m) {
+//        console.log(arguments)
+        m.sayHello();
+    })
+//    var mymodule = seajs.require("mymodule");
+//    console.log(mymodule)
+
+</script>
+</html>
