@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var string="string";
+    var newString=new String("string");
+    var number=1;
+    var newNumber=new Number("number");
+    var func=function () {
+        this.a="10";;
+        console.error("func called");
+    }
+    var newFunc=new func();
+    //通过以下测试结果，可以发现，只要是new出来的变量，typeof都是object；
+    console.log(typeof string);
+    console.log(typeof newString);
+    console.log(typeof number);
+    console.log(typeof newNumber);
+    console.log(typeof func);
+    console.log(typeof newFunc);
+    console.log("string instanceof String", string instanceof String);
+    console.log("newString instanceof String",newString instanceof String);
+    console.log("number instanceof Number",number instanceof Number);
+    console.log( "newNumber instanceof Number",newNumber instanceof Number);
+    console.log("func instanceof Function", func instanceof Function);
+    console.log("newFunc instanceof Function",newFunc instanceof Function);
+    console.log("newFunc instanceof Object",newFunc instanceof Object);
+</script>
+</html>

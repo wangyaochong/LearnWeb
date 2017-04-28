@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="a">
+    <select name="a" size="1" id="objTest">
+        <option value="a">1</option>
+        <option value="b">2</option>
+        <option value="c">3</option>
+    </select>
+</form>
+
+</body>
+<script>
+    //当前默认选中的是第一个，
+//    var obj=document.getElementById("obj");
+    console.log( objTest.options[objTest.selectedIndex].text ) //输出的是1,
+    console.log( objTest.options[objTest.selectedIndex].value ) //输出的是a
+</script>
+</html>

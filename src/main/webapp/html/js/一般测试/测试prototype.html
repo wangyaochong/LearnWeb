@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var F=function(){};
+    Object.prototype.a=function(){console.log('a func')};
+    Function.prototype .b=function(){console.log('b func')};
+    var b=new Function("a","b","c", "console.log('test');console.log(arguments)");
+    var f=new F();
+    console.log(f.a);
+    console.log(f.b);
+    console.log(b.b)
+    b(1,2,3);
+</script>
+</html>
