@@ -14,9 +14,16 @@
     var newNumber=new Number("number");
     var func=function () {
         this.a="10";;
-        console.error("func called");
+        console.log("func called");
     }
+    func.prototype.protoTest="test";
+    func.test="test";
     var newFunc=new func();
+    console.log("func.protoTest",func.protoTest);
+    console.log("newFunc.protoTest",newFunc.protoTest);
+    console.log("func.test",func.test);
+    console.log("newFunc.test",newFunc.test);
+    console.log("以上结果说明：使用.赋值，只和当前对象有关，使用prototype赋值，只和new出来的对象有关");
     //通过以下测试结果，可以发现，只要是new出来的变量，typeof都是object；
     console.log(typeof string);
     console.log(typeof newString);
@@ -31,5 +38,24 @@
     console.log("func instanceof Function", func instanceof Function);
     console.log("newFunc instanceof Function",newFunc instanceof Function);
     console.log("newFunc instanceof Object",newFunc instanceof Object);
+
+    console.log("测试 null 和 undefined 在比较时是否会转换")
+    console.log("null ==true ",null==true);
+    console.log("null ==false",null==false);
+    console.log("undefined==true",undefined==true);
+    console.log("undefined==false",undefined==false);
+    console.log("undefined==null",undefined==null);
+
+    console.log("null ===true ",null===true);
+    console.log("null ===false",null===false);
+    console.log("undefined===true",undefined===true);
+    console.log("undefined===false",undefined===false);
+    console.log("undefined===null",undefined===null);
+
+    console.log("以上结果说明，只有undefined==null会隐式转换，其他情况都不会转换");
+
+    console.log(Math.max(1,2,3));
+    Math.max.apply(null,[1,2,3]);
+    
 </script>
 </html>
