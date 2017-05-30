@@ -1,4 +1,4 @@
-package test.Util;
+package test.interview.凡普金科;
 
 /**
  * Created by【王耀冲】on 【2017/5/13】 at 【15:18】.
@@ -16,7 +16,7 @@ public class SecondLarge {
                 secondLoc=maxLoc;
                 maxLoc=i;
             }else{
-                if(input[i]>input[secondLoc]&&input[i]!=input[maxLoc])j{//如果比第二大，就是第二大的了
+                if(input[i]>input[secondLoc]&&input[i]!=input[maxLoc]){//如果比第二大，就是第二大的了
                     secondLoc=i;
                 }
             }
